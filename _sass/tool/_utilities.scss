@@ -1,0 +1,107 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Floats
+// -------------------------
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.center {
+  margin: 0 auto $line-height-base;
+  text-align: center;
+}
+
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+
+ // List
+ // -------------------------
+
+@mixin list-inline {
+  padding: 0;
+  margin: 0 0 $base-line;
+  li {
+    display: inline-block;
+  }
+}
+
+
+// Toggling content
+// -------------------------
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+// Class for hidding text but keep text accessible
+// --------------------------------------------------
+
+.sr-only,
+.visuallyhidden {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}
+
+
+// Icons
+// -------------------------
+
+.icon {
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    path {
+      fill: $grey-color;
+    }
+  }
+}
