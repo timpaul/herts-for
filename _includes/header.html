@@ -6,14 +6,18 @@
   <div class="wrapper">
 
     <div class="site-logo">
-      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      <a class="site-title" href="{{ site.baseurl }}/">
+        <span class="visuallyhidden">{{ site.title }}</span>
+        <img src="{{ site.baseurl }}/assets/images/logo.png" alt="{{ site.title }}" />
+      </a>
     </div>
 
     <nav class="nav-main" role="navigation">
       <ul>
-        {% for page in site.pages %}
-          {% if page.navigation %}
-          <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% assign pages = site.pages | sort:"navigation"  %}
+        {% for p in pages %}
+          {% if p.navigation %}
+          <li><a class="{% if p.url == page.url %}active {% endif %}page-link" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>

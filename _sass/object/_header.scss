@@ -4,7 +4,7 @@
 
 .site-header {
   padding: 0.5rem 0 $base-line;
-  text-align: center;
+  //text-align: center;
   .wrapper {
     @media #{$medium-up} {
       display: flex;
@@ -17,16 +17,8 @@
   .site-title {
     display: block;
     margin: $base-line/2 auto;
-    font-size: $base-em * $ms5;
-    @media #{$medium-up} {
-      font-size: $base-em * $ms6;
-    }
-    font-weight: 600;
-    color: #000;
-    text-align: center;
     &:hover {
       opacity: 0.88;
-      text-decoration: underline;
     }
   }
 }
@@ -36,7 +28,7 @@
     a {
       &:hover,&:focus,&:active {
         text-decoration: none;
-        border-bottom: 2px solid #444;
+        border-bottom: 2px solid $red;
       }
     }
   }
@@ -47,8 +39,9 @@
   display: flex;
   align-items: center;
   flex: 1;
+  padding-left: 2rem;
   ul {
-    display: flex;
+    //display: flex;
     flex-wrap: wrap;
     justify-content: center;
     @media #{$medium-up} {
@@ -62,7 +55,7 @@
   }
   li {
     flex: 1;
-    text-align: center;
+    //text-align: center;
     max-width: 10rem;
   }
   a {
@@ -90,4 +83,11 @@
     }
   }
   background: #000;
+}
+
+.social-media-links{
+  text-align: right;
+  img{
+    width: 4.5rem;
+  }
 }

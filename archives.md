@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Archives
-navigation: true
 ---
 
 <h1>Archives</h1>

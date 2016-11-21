@@ -76,6 +76,13 @@ $number: 4; // for equal columns
       width: auto;
     }
   }
+  & > .flexitem-triple {
+    width: calc(100% * 3 / #{$number} - #{$gutter});
+    @supports (display: flex) {
+      flex: 0 0 calc(100% * 3 / #{$number} - #{$gutter});
+      width: auto;
+    }
+  }
   & > .flexitem-first {
     order: -1;
   }
